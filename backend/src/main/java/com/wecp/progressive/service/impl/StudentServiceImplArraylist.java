@@ -2,6 +2,7 @@ package com.wecp.progressive.service.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.wecp.progressive.entity.Student;
@@ -29,10 +30,20 @@ public class StudentServiceImplArraylist implements StudentService {
         Collections.sort(localstudents);
         return localstudents;
     }
-
+    @Override
     public void emptyArrayList() 
     {
-        studentList = new ArrayList<>();
+        studentList.clear();
     }
+
+    public Comparator nammeComparator=new Comparator<Student>() {
+
+        @Override
+        public int compare(Student s1, Student s2) {
+            return s1.getFullName().compareTo(s2.getFullName());
+        }
+        
+        
+    };
 
 }

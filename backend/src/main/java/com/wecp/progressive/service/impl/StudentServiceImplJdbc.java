@@ -11,11 +11,16 @@ public class StudentServiceImplJdbc implements StudentService {
 
     private StudentDAO studentDAO;
     
+    
+
+    public StudentServiceImplJdbc(StudentDAO studentDAO) {
+        this.studentDAO = studentDAO;
+    }
 
     @Override
     public List<Student> getAllStudents() {
-        List<Student> students = new ArrayList<>();
-        return students;
+        return new ArrayList<>();
+      
     }
 
     @Override
@@ -25,14 +30,16 @@ public class StudentServiceImplJdbc implements StudentService {
 
     @Override
     public List<Student> getAllStudentSortedByName() {
-        List<Student> students = new ArrayList<>();
-        return students;
+        return new ArrayList<>();
     }
 
+    @Override
     public void updateStudent(Student student) {}
 
+    @Override
     public void deleteStudent(int studentId) {}
 
+    @Override
     public Student getStudentById(int studentId) {
         return null;
     }

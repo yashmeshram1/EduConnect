@@ -29,8 +29,8 @@ public class TeacherDAOImpl implements TeacherDAO{
 
     @Override
     public List<Teacher> getAllTeachers() {
-        List<Teacher> teachers=new ArrayList<>();
-        return teachers;
+        return new ArrayList<>();
+        
     }
 
 

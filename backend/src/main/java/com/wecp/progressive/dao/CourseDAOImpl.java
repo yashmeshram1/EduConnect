@@ -30,8 +30,8 @@ public class CourseDAOImpl implements CourseDAO{
 
     @Override
     public List<Course> getAllCourses() {
-        List<Course> course=new ArrayList<>();
-       return course;
+        return new ArrayList<>();
+       
     }
 
     

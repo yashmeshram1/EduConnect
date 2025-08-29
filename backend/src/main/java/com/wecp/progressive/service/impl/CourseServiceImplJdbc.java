@@ -11,11 +11,16 @@ public class CourseServiceImplJdbc implements CourseService {
 
     private CourseDAO courseDAO;
 
+    
+    public CourseServiceImplJdbc(CourseDAO courseDAO) {
+        this.courseDAO = courseDAO;
+    }
+
     @Override
     public List<Course> getAllCourses() {
        
-        List<Course> courses=new ArrayList<>();
-        return courses;
+        return new ArrayList<>();
+        
     }
 
     @Override

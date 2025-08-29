@@ -2,6 +2,7 @@ package com.wecp.progressive.service.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.wecp.progressive.entity.Teacher;
@@ -30,9 +31,20 @@ public class TeacherServiceImplArraylist implements TeacherService {
         return localteachers;
     }
 
+    @Override
     public void emptyArrayList() 
     {
-        teacherList =new ArrayList<>();
+        teacherList.clear();
     }
+
+    public Comparator yearofExper=new Comparator<Teacher>() {
+
+        @Override
+        public int compare(Teacher t1, Teacher t2) {
+           return Integer.compare(t1.getYearsOfExperience(), t2.getYearsOfExperience());
+        }
+        
+        
+    };
 
 }

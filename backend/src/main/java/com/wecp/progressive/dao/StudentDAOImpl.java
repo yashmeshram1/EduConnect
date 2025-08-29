@@ -29,8 +29,7 @@ public class StudentDAOImpl implements StudentDAO{
 
     @Override
     public List<Student> getAllStudents() {
-        List<Student> students=new ArrayList<>();
-       return students;
+       return new ArrayList<>();
     }
 
     

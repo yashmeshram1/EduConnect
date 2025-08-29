@@ -10,11 +10,16 @@ import com.wecp.progressive.service.TeacherService;
 public class TeacherServiceImplJdbc implements TeacherService {
 
     private TeacherDAO teacherDAO;
+    
+
+    public TeacherServiceImplJdbc(TeacherDAO teacherDAO) {
+        this.teacherDAO = teacherDAO;
+    }
 
     @Override
     public List<Teacher> getAllTeachers() {
-        List<Teacher> teachers = new ArrayList<>();
-        return teachers;
+        return new ArrayList<>();
+        
     }
 
     @Override
@@ -24,8 +29,7 @@ public class TeacherServiceImplJdbc implements TeacherService {
 
     @Override
     public List<Teacher> getTeacherSortedByExperience() {
-        List<Teacher> teachers = new ArrayList<>();
-        return teachers;
+        return new ArrayList<>();
     }
 
     public void updateTeacher(Teacher teacher) {
