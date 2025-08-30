@@ -70,7 +70,7 @@ public class Teacher implements Comparable<Teacher>{
     }
 
     @Override
-    public int compareTo(Teacher o) {
-        return Integer.compare(this.yearsOfExperience, o.getYearsOfExperience());
+    public int compareTo(Teacher other) {
+        return Integer.compare(this.yearsOfExperience, other.getYearsOfExperience());
     }
 }
