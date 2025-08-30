@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.wecp.progressive.entity.Course;
-import com.wecp.progressive.entity.Student;
 
 public class CourseDAOImpl implements CourseDAO{
 
     @Override
     public int addCourse(Course course) {
-     return -1;
+        return -1;
     }
 
     @Override
@@ -20,7 +19,6 @@ public class CourseDAOImpl implements CourseDAO{
 
     @Override
     public void updateCourse(Course course) {
-       
     }
 
     @Override
@@ -31,9 +29,6 @@ public class CourseDAOImpl implements CourseDAO{
     @Override
     public List<Course> getAllCourses() {
         return new ArrayList<>();
-       
     }
-
-    
 
 }

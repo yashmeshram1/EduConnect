@@ -19,19 +19,16 @@ public class StudentDAOImpl implements StudentDAO{
 
     @Override
     public void updateStudent(Student student) {
-        
+
     }
 
     @Override
     public void deleteStudent(int studentId) {
-
+        
     }
 
     @Override
     public List<Student> getAllStudents() {
-       return new ArrayList<>();
+        return new ArrayList<>();
     }
-
-    
-
 }

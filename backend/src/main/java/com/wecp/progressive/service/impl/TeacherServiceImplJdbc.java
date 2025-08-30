@@ -10,7 +10,6 @@ import com.wecp.progressive.service.TeacherService;
 public class TeacherServiceImplJdbc implements TeacherService {
 
     private TeacherDAO teacherDAO;
-    
 
     public TeacherServiceImplJdbc(TeacherDAO teacherDAO) {
         this.teacherDAO = teacherDAO;
@@ -19,7 +18,6 @@ public class TeacherServiceImplJdbc implements TeacherService {
     @Override
     public List<Teacher> getAllTeachers() {
         return new ArrayList<>();
-        
     }
 
     @Override
@@ -33,12 +31,15 @@ public class TeacherServiceImplJdbc implements TeacherService {
     }
 
     public void updateTeacher(Teacher teacher) {
+
     }
 
     public void deleteTeacher(int teacherId) {
+
     }
 
     public Teacher getTeacherById(int teacherId) {
         return null;
     }
+
 }

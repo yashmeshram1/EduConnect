@@ -10,8 +10,6 @@ import com.wecp.progressive.service.StudentService;
 public class StudentServiceImplJdbc implements StudentService {
 
     private StudentDAO studentDAO;
-    
-    
 
     public StudentServiceImplJdbc(StudentDAO studentDAO) {
         this.studentDAO = studentDAO;
@@ -20,7 +18,6 @@ public class StudentServiceImplJdbc implements StudentService {
     @Override
     public List<Student> getAllStudents() {
         return new ArrayList<>();
-      
     }
 
     @Override
@@ -34,14 +31,17 @@ public class StudentServiceImplJdbc implements StudentService {
     }
 
     @Override
-    public void updateStudent(Student student) {}
+    public void updateStudent(Student student) {
+
+    }
 
     @Override
-    public void deleteStudent(int studentId) {}
+    public void deleteStudent(int studentId) {
+
+    }
 
     @Override
     public Student getStudentById(int studentId) {
         return null;
     }
-
 }

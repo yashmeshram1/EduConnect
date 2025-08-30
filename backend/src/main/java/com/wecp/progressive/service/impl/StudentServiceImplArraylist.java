@@ -10,11 +10,10 @@ import com.wecp.progressive.service.StudentService;
 
 public class StudentServiceImplArraylist implements StudentService {
 
-    private static List<Student> studentList=new ArrayList<>();
+    private static List<Student> studentList = new ArrayList<>();
+
     @Override
     public List<Student> getAllStudents() {
-        // List<Student> students=new ArrayList<>();
-
         return studentList;
     }
 
@@ -26,24 +25,23 @@ public class StudentServiceImplArraylist implements StudentService {
 
     @Override
     public List<Student> getAllStudentSortedByName() {
-        List<Student> localstudents=new ArrayList<>(studentList);
-        Collections.sort(localstudents);
-        return localstudents;
+        List<Student> sortedByNameList = new ArrayList<>(studentList);
+        Collections.sort(sortedByNameList);
+        return sortedByNameList;
     }
+
     @Override
-    public void emptyArrayList() 
-    {
+    public void emptyArrayList() {
         studentList.clear();
     }
 
-    public Comparator nammeComparator=new Comparator<Student>() {
+    public Comparator nameComparator = new Comparator<Student>() {
 
         @Override
         public int compare(Student s1, Student s2) {
             return s1.getFullName().compareTo(s2.getFullName());
         }
-        
-        
+
     };
 
 }

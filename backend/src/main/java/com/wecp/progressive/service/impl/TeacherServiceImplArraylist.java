@@ -4,17 +4,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
 import com.wecp.progressive.entity.Teacher;
 import com.wecp.progressive.service.TeacherService;
 
 public class TeacherServiceImplArraylist implements TeacherService {
-
-    private static List<Teacher> teacherList=new ArrayList<>();
+    
+    private static List<Teacher> teacherList = new ArrayList<>();
 
     @Override
     public List<Teacher> getAllTeachers() {
-        // List<Teacher> teachers = new ArrayList<>();
         return teacherList;
     }
 
@@ -26,25 +24,23 @@ public class TeacherServiceImplArraylist implements TeacherService {
 
     @Override
     public List<Teacher> getTeacherSortedByExperience() {
-        List<Teacher> localteachers = new ArrayList<>(teacherList);
-        Collections.sort(localteachers);
-        return localteachers;
+        List<Teacher> sortedByExperience = new ArrayList<>(teacherList);
+        Collections.sort(sortedByExperience);
+        return sortedByExperience;
     }
 
     @Override
-    public void emptyArrayList() 
-    {
+    public void emptyArrayList() {
         teacherList.clear();
     }
 
-    public Comparator yearofExper=new Comparator<Teacher>() {
+    public Comparator yearsOfExperienceComparator = new Comparator<Teacher>() {
 
         @Override
         public int compare(Teacher t1, Teacher t2) {
-           return Integer.compare(t1.getYearsOfExperience(), t2.getYearsOfExperience());
+            return Integer.compare(t1.getYearsOfExperience(), t2.getYearsOfExperience());
         }
-        
-        
+
     };
 
 }
