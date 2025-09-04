@@ -1,8 +1,10 @@
 package com.wecp.progressive.service.impl;
 
+import org.springframework.stereotype.Service;
+
 import com.wecp.progressive.dto.UserRegistrationDTO;
 import com.wecp.progressive.entity.User;
-
+@Service
 public class UserLoginServiceImpl {
 
     User createUser(User user) {
