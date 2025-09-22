@@ -1,0 +1,48 @@
+<div class="dashboard-container" *ngIf="role === 'TEACHER'">
+  <h1>Teacher Dashboard</h1>
+  
+  <!-- Teacher Details Section -->
+  <div class="teacher-details" *ngIf="teacherDetails">
+    <h2>Teacher Information</h2>
+    <div class="info-card">
+      <p><strong>Name:</strong> {{ teacherDetails.fullName }}</p>
+      <p><strong>Email:</strong> {{ teacherDetails.email }}</p>
+      <p><strong>Subject:</strong> {{ teacherDetails.subject }}</p>
+      <p><strong>Years of Experience:</strong> {{ teacherDetails.yearsOfExperience }}</p>
+      <p><strong>Contact:</strong> {{ teacherDetails.contactNumber }}</p>
+    </div>
+  </div>
+
+  <!-- Courses Section -->
+  <div class="courses-section">
+    <h2>My Courses</h2>
+    <div class="courses-grid" *ngIf="courses && courses.length > 0">
+      <div class="course-card" *ngFor="let course of courses">
+        <h3>{{ course.courseName }}</h3>
+        <p>{{ course.description }}</p>
+        <p><strong>Course ID:</strong> {{ course.courseId }}</p>
+      </div>
+    </div>
+    <p *ngIf="!courses || courses.length === 0">No courses available</p>
+  </div>
+
+  <!-- Students Section -->
+  <div class="students-section">
+    <h2>All Students</h2>
+    <div class="students-grid" *ngIf="students && students.length > 0">
+      <div class="student-card" *ngFor="let student of students">
+        <h4>{{ student.fullName }}</h4>
+        <p><strong>Email:</strong> {{ student.email }}</p>
+        <p><strong>Contact:</strong> {{ student.contactNumber }}</p>
+        <p><strong>Address:</strong> {{ student.address }}</p>
+        <p><strong>Date of Birth:</strong> {{ student.dateOfBirth | date }}</p>
+      </div>
+    </div>
+    <p *ngIf="!students || students.length === 0">No students available</p>
+  </div>
+</div>
+
+<div class="dashboard-container" *ngIf="role !== 'TEACHER'">
+  <h1>Dashboard</h1>
+  <p>Welcome to EduConnect!</p>
+</div>
